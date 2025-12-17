@@ -8,3 +8,6 @@ Der kan findes en demo video af hvor langt vi kom med den teknologiske side af p
 - watercycle.ino er koden på selve arduinoen. Den modtager et serial input fra computeren, som arduinoen er tilsluttet til.
 - watercycle_reciever.py er koden der køre på den tilsuttede arduino. Den modtager signalet fra telefonen appen.
 - watercycle_app.swift er koden for telefon appen. Det noteres, at denne kode var skabt med hjælp fra AI.
+
+# Sådan den trådløse forbindelse virker og hvorfor vi ikke brugte Nano ESP32
+Vi brugte ikke Nano ESP32 til vores trådløse forbindelse, da dens pins ikke var kraftfulde nok til at forbindes til 5V relays som er forbundet til 9V batterier. Derfor virker den trådløse forbindelse ved at forbinde Arduino Uno'en til at modtage et serial input fra computeren. Dette sendes fra appen til computeren via discord bots og discord webhooks. Dette er fordi vores produkt kun er en **alpha prototype** så vi mente at hoste en server med authentication etc. var unødvendigt.
